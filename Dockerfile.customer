@@ -1,0 +1,23 @@
+FROM node:18
+
+RUN mkdir -p /usr/src/app/
+WORKDIR /usr/src/app/
+
+COPY . .
+RUN npm i
+
+WORKDIR /usr/src/app/packages/locales
+
+RUN npm run compile
+
+WORKDIR /usr/src/app/apps/customer
+
+RUN NEXT_PUBLIC_APP_ENV=NEXT_PUBLIC_APP_ENV NEXT_PUBLIC_GRAPHQL_URI=NEXT_PUBLIC_GRAPHQL_URI npm run build
+
+EXPOSE 3000
+
+RUN npx next telemetry disable
+
+RUN ls
+
+CMD npm run start

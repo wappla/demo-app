@@ -1,0 +1,16 @@
+{
+    "locales": ["en", "nl"],
+    "sourceLocale": "en",
+    "format": "minimal",
+    "catalogs": [{
+        "path": "{locale}/messages",
+        "include": [
+            "../../apps/admin/src",
+            "../../apps/api/src",
+            "../../packages/components/src"
+        ]
+    }],
+    "extractBabelOptions": {
+        "presets": ["next/babel"]
+    }
+}

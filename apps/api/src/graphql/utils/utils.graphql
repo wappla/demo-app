@@ -1,0 +1,20 @@
+scalar Date
+
+scalar Time
+
+scalar DateTime
+
+scalar Json
+
+scalar Upload
+
+type PageInfo {
+    hasNextPage: Boolean!
+    startCursor: String
+    endCursor: String
+}
+
+enum SortDirection {
+    ASC
+    DESC
+}

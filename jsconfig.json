@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "paths": {
+            "@demo/utils/*": ["./packages/utils/src/*"],
+            "@demo/constants": ["./packages/constants/src/index"],
+            "@demo/components/*": ["./packages/components/src/*"],
+            "@demo/locales/*": ["./packages/locales/*"]
+        }
+    }
+}

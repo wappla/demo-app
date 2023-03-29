@@ -1,0 +1,35 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# hidden folders
+.git
+.docker
+
+# backups
+*.bacpac
+
+# next.js
+.next
+.turbo
+
+# production
+build
+out
+
+# env files
+.env*
+
+# docker
+Dockerfile
+.dockerignore
+
+# misc
+README.md

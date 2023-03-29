@@ -1,0 +1,9 @@
+{
+    "ext": "js,json,graphql",
+    "watch": [
+        "./",
+        "../../packages/constants",
+        "../../packages/utils",
+        "../../packages/locales"
+    ]
+}

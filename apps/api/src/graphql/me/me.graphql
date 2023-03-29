@@ -1,0 +1,22 @@
+type Query {
+    me: Me
+}
+
+type Mutation {
+    login: Me
+}
+
+type Me {
+    id: ID
+    name: String
+    email: String
+    permissions: UserPermissions
+}
+
+type UserPermissions {
+    canViewDashboard: Boolean
+    canViewValidations: Boolean
+    canViewDisasters: Boolean
+    canViewSettings: Boolean
+    canCreateCustomer: Boolean
+}

@@ -1,0 +1,42 @@
+{
+    "name": "@demo/admin",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "test": "jest",
+        "dev": "next dev -p 3001",
+        "build": "next build ",
+        "start": "next start",
+        "export": "next export"
+    },
+    "dependencies": {
+        "@lingui/core": "^3.15.0",
+        "@lingui/react": "^3.15.0",
+        "@sentry/nextjs": "^7.31.1",
+        "@tanstack/react-query": "^4.20.4",
+        "cva": "npm:class-variance-authority@^0.4.0",
+        "framer-motion": "^7.10.3",
+        "graphql-request": "^5.1.0",
+        "history": "^5.3.0",
+        "lodash.debounce": "^4.0.8",
+        "make-plural": "^7.2.0",
+        "next": "^13.1.1",
+        "next-auth": "^4.18.7",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-popper": "^2.3.0",
+        "react-router-dom": "^6.5.0",
+        "use-query-params": "^2.1.2"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^14.4.3",
+        "autoprefixer": "^10.4.13",
+        "jest": "^29.3.1",
+        "jest-environment-jsdom": "^29.3.1",
+        "msw": "^0.49.3",
+        "postcss": "^8.4.20",
+        "tailwindcss": "^3.2.4"
+    }
+}

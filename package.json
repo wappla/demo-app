@@ -1,0 +1,41 @@
+{
+    "name": "@demo/mono",
+    "version": "1.0.0",
+    "private": true,
+    "packageManager": "npm@8.15.0",
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ],
+    "scripts": {
+        "copy:env": "cp .env.example .env && (cd apps/api && cp .env.example .env); (cd apps/admin && cp .env.example .env);",
+        "dev": "turbo run dev",
+        "test": "turbo run test",
+        "lint": "eslint ./packages/* && eslint ./apps/admin && eslint ./apps/api",
+        "format": "prettier --write \"**/*.{js,md,json}\"",
+        "docker:start": "docker compose --profile develop up -d",
+        "docker:stop": "docker compose --profile develop stop",
+        "docker:down": "docker compose --profile develop down",
+        "modules:install": "npm i",
+        "modules:remove": "rm -rf ./node_modules",
+        "modules:reset": "npm run modules:remove && npm run modules:install",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@dashdot/eslint-config-react": "^0.4.0",
+        "eslint": "^7.32.0",
+        "eslint-config-next": "^13.0.7",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-jest": "^24.7.0",
+        "eslint-plugin-jsx-a11y": "^6.7.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-simple-import-sort": "^8.0.0",
+        "husky": "^8.0.3",
+        "prettier": "^2.8.1",
+        "turbo": "1.6.3"
+    }
+}

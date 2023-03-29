@@ -1,0 +1,12 @@
+{
+    "name": "@demo/locales",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "extract": "NODE_ENV=development lingui extract --clean",
+        "compile": "lingui compile"
+    },
+    "devDependencies": {
+        "@lingui/cli": "^3.16.0"
+    }
+}

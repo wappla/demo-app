@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:${POSTGRES_VERSION}
+    profiles: ["develop", "test"]
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USERNAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DATABASE}
+    volumes:
+        - ./.docker/postgres:/var/lib/postgresql/dat
+  redis:
+    image: redis:${REDIS_VERSION}
+    profiles: ["develop", "test"]
+    ports:
+      - ${REDIS_PORT}:6379
+    expose:
+      - ${REDIS_PORT}
+    volumes:
+      - ./.docker/redis:/data
